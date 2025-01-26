@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ecommerce
+  datasource:
+    url: jdbc:h2:mem:db;MODE=MYSQL;DB_CLOSE_DELAY=-1;INIT=SET NAMES UTF8
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # 기존 테이블 삭제 후 새로 생성
+    properties:
+        hibernate.dialect: org.hibernate.dialect.H2Dialect # H2 전용 Dialect
+    defer-datasource-initialization: true # DataSource 초기화를 지연
+    h2:
+      console:
+        enabled: true # H2 콘솔 활성화
