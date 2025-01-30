@@ -1,11 +1,17 @@
 package com.hhplus.ecommerce.interfaces.dto.point;
 
-import lombok.AllArgsConstructor;
+import com.hhplus.ecommerce.domain.point.UserPointCommand;
 import lombok.Builder;
-import lombok.NoArgsConstructor;
 
 @Builder
 public record UserPointRequest (
-    Long userId,
-    Long amount
-){}
+        Long userId,
+        Long amount
+){
+    public UserPointCommand.Charge toCommand(){
+        return UserPointCommand.Charge.builder()
+                .userId(this.userId)
+                .amount(this.amount)
+                .build();
+    }
+}
