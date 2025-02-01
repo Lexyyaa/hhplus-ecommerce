@@ -7,7 +7,6 @@ import lombok.*;
 @Entity
 @Table(name = "product_stock")
 @Getter
-@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,10 +22,13 @@ public class ProductStock extends BaseEntity {
     @Column(name = "sku", nullable = false)
     private String sku;
 
+    @Column(name = "name", nullable = false)
+    private String name;
+
     @Column(name = "quantity", nullable = false)
     private Long quantity;
 
     @Column(name = "price", nullable = false)
     private Long price;
-
 }
+
