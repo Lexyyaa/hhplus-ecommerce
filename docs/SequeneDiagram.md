@@ -79,28 +79,6 @@
       deactivate 재고
       API -->> 사용자 : 수행 결과 반환
   ```
-<<<<<<< HEAD
-=======
-### 2.3 인기 상품 조회
-  ```
-  최근 3일간의 판매량 상위 5개 품목의 목록을 조회한다. 
-  ```
-  ```mermaid
-  sequenceDiagram
-      actor 사용자 as 사용자
-
-      participant API as API
-      participant 주문 as 주문
-      participant 상품 as 상품
-
-      사용자 ->> API : 인기 상품 조회 요청
-      API ->> +주문 : 인기 상품 조회 API 호출
-      주문 -->> 주문 : 인기상품 목록 생성 및 저장
-      주문 -->> -API : 목록 반환
-      API -->> 사용자 : 수행 결과 반환
-  ```
->>>>>>> c5fdf27 (docs : sequence diagram 작성)
-
 ## 3. 장바구니
 ### 3.1 장바구니 상품 추가
   ```
@@ -235,7 +213,6 @@
       deactivate 주문
       API -->> 사용자 : 수행 결과 반환
   ```
-<<<<<<< HEAD
 ### 5.2 인기 상품 조회
   ```
   최근 3일간의 판매량 상위 5개 품목의 목록을 조회한다. 
@@ -253,7 +230,6 @@
       주문 -->> -API : 목록 반환
       API -->> 사용자 : 수행 결과 반환
   ```
-=======
 
 >>>>>>> c5fdf27 (docs : sequence diagram 작성)
 ## 6. 결제
